@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://ucbcoding:ucbcoding1@ds125616.mlab.com:25616/heroku_3bkwdbr4", { useNewUrlParser: true });
+mongoose.connect("mongodb://<ucbcoding>:<ucbcoding1>@ds125616.mlab.com:25616/heroku_3bkwdbr4", { useNewUrlParser: true });
 
 app.get("/scrape", function(req, res) {
   axios.get("https://www.coinmarketcap.com/").then(function(response) {
